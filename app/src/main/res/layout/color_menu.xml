@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottomSheetColor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    android:background="@drawable/background_round"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Cambiar de color"
+        android:textSize="26sp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPersonal"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:text="Personal"
+            android:backgroundTint="@color/black_light2"
+            android:textColor="@color/white"
+            app:cornerRadius="26dp"
+            app:rippleColor="@color/black_light2"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTrabajo"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:text="Trabajo"
+            android:backgroundTint="@color/black_light2"
+            android:textColor="@color/white"
+            app:cornerRadius="26dp"
+            app:rippleColor="@color/black_light2"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnImportante"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:text="Importante"
+            android:backgroundTint="@color/black_light2"
+            android:textColor="@color/white"
+            app:cornerRadius="26dp"
+            app:rippleColor="@color/black_light2"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPersonal2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/black_light2"
+            android:textColor="@color/white"
+            app:cornerRadius="26dp"
+            app:rippleColor="@color/black_light2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_arrow_back"
+                    android:contentDescription="d" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Personal"
+                    android:textStyle="bold"
+                    android:paddingStart="8dp" />
+
+            </LinearLayout>
+        </com.google.android.material.button.MaterialButton>
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

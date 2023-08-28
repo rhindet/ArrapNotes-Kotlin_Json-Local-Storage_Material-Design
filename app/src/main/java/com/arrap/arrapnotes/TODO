@@ -1,0 +1,27 @@
+// El scroll de las notas no deja ver todas las notas (probablemente por margenes y padding)
+//Aberiguar como manejar los colores de los items
+// seleccionar items y modificarlos
+// fechas de creacion y opcion de fechal limite con cambio de color
+// filtrar notas por nombre o fecha
+// crear notas tipo checklist
+// opciones de themes
+//Crear menu de navegacion
+// No cerrar el main activity dejarlo de segundo plano??
+//No se actualiza el itemview automaticamaente
+runBlocking {
+            val filteredNotes = mutableListOf<Notes>()
+
+            launch(Dispatchers.Default) {
+                for (note in notes) {
+                    if (note.fileTitle.toLowerCase().contains(query.toLowerCase())) {
+                        filteredNotes.add(note)
+                    }
+                }
+            }.join() // Espera a que termine la búsqueda
+
+            runOnUiThread {
+                notes.clear()
+                notes.addAll(filteredNotes)
+                mAdapter.notifyDataSetChanged()
+            }
+        }

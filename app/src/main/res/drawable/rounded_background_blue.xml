@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/blue" /> <!-- Color de fondo -->
+    <corners android:radius="40dp" /> <!-- Radio de los bordes redondeados -->
+</shape>
